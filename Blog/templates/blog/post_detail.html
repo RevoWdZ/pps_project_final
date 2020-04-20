@@ -1,0 +1,59 @@
+{% extends "blog/base.html" %}
+{% block content %}
+        <article class="media content-section">
+            <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a>
+                    <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
+                    {% if object.author == user or user.is_superuser %}
+                        <div>
+                            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
+                            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
+                        </div>
+                    {% endif %}
+                </div>
+                <h2 class="article-title">{{ object.title }}</h2>
+                <p class="article-content">{{ object.content }}</p>
+                {% if post.image %}
+                   <img class="post-img" id="myImg" align="middle" src="{{ object.image.url|default_if_none:'#' }}">
+                   <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                        <span class="close">&times;</span>
+
+                        <img class="modal-content" id="img01">
+                        
+                        <div id="caption"></div>
+                    </div>
+                {% endif %}
+
+            </div>
+        </article>
+        <div>
+	        <div class="row">
+                <div class="col-12">
+                <h2 class="comment-header">Comments</h2>
+                {% if user.is_authenticated %}
+                    {% csrf_token %}
+                    {{comment_form.as_p}}
+                    <a type="submit" class="btn comment-btn" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
+                {% else %}
+                <p>You need to log in to comment a post!</p>
+                {% endif %}
+                </div>
+            </div>
+            <div class="comment-section">
+                {% for comment in post.comments.all %}
+                    <blockquote class="blockquote">
+                    <p class="mb-0">{{comment.content}}</p>
+                    <footer class="blockquote-footer">By <cite title="Source Title">{{comment.user}}</cite>
+                        {% if comment.user == user or user.is_superuser %}
+                        <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'comment_remove' pk=comment.pk %}">Delete</a>
+                        {% endif %}
+                    </footer>
+                    </blockquote>
+                {% endfor %}
+            </div>
+        </div>
+{% endblock content %}
