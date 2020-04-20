@@ -4,8 +4,8 @@ Projekt jest realizowany na przedmiot Projektowanie Portali Społecznościowych.
 
 # Wykorzystane technologie:
 
-* -Python/Django
+* Python/Django
 
-* -Bootstrap 4
+* Bootstrap 4
 
-* -JavaScript
+* JavaScript
