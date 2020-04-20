@@ -14,3 +14,11 @@ class PostCreateView(forms.ModelForm):
     class Meta:
         model = Post
         fields = ['image']
+
+
+class PostUpdateView(forms.ModelForm):
+    image = forms.ImageField(required=False)
+
+    class Meta:
+        model = Post
+        fields = ['image']

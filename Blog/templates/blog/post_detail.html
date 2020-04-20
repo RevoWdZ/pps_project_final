@@ -39,10 +39,11 @@
                     {{comment_form.as_p}}
                     <a type="submit" class="btn comment-btn" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
                 {% else %}
-                <p>You need to log in to comment a post!</p>
+                <p style="background-color: white;color: red; border-radius: 12px; font-family: sans-serif; padding: 5px;text-align: center;">You need to log in to comment a post!</p>
                 {% endif %}
                 </div>
             </div>
+            {% if post.comments.count > 0 %}
             <div class="comment-section">
                 {% for comment in post.comments.all %}
                     <blockquote class="blockquote">
@@ -55,5 +56,8 @@
                     </blockquote>
                 {% endfor %}
             </div>
+            {% else %}
+            <p style="background-color: white;border-radius: 12px; font-family: sans-serif; padding: 5px;">Sorry,no comments :(</p>
+            {% endif %}
         </div>
 {% endblock content %}
