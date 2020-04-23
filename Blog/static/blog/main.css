@@ -1,279 +1,296 @@
 body {
-    /* background: #fafafa; */
-    background-image: url(/static/blog/img/hsv-stadium.png);
-    color: #333333;
-    margin-top: 5rem;
+  /* background: #fafafa; */
+  background-image: url(/static/blog/img/hsv-stadium.png);
+  color: #333333;
+  margin-top: 5rem;
 }
-.about-header{
-
+.about-header {
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #444444;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #444444;
 }
 
 ul {
-    margin: 0;
+  margin: 0;
 }
 
-#logo{
-    width: 72px;
-    height: 51px;
-    display: block;
-    margin-right: 10px;
-    border: 1px solid white;
+#logo {
+  width: 72px;
+  height: 51px;
+  display: block;
+  margin-right: 10px;
+  border: 1px solid white;
 }
-
 
 .bg-blue {
-    background-color:  #005aaa
+  background-color: #005aaa;
 }
 
 .site-header .navbar-nav .nav-link {
-    color: #cbd5db;
+  color: #cbd5db;
 }
 
 .site-header .navbar-nav .nav-link:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .site-header .navbar-nav .nav-link.active {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .content-section {
-    background: #ffffff;
-    padding: 10px 20px;
-    border: 1px solid #dddddd;
-    border-radius: 12px;
-    margin-bottom: 20px;
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
 .article-title {
-    color: #444444;
+  color: #444444;
 }
 
 a.article-title:hover {
-    color: #005aaa;
-    text-decoration: none;
+  color: #005aaa;
+  text-decoration: none;
 }
 
 .article-content {
-    white-space: pre-line;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 500px;
+}
+
+.inside-article-content {
+    word-break: break-all; 
 }
 
 .article-img {
-    height: 65px;
-    width: 65px;
-    margin-right: 16px;
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
 }
 
 .article-metadata {
-    padding-bottom: 1px;
-    margin-bottom: 4px;
-    border-bottom: 1px solid #e3e3e3
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3;
 }
 
 .article-metadata a:hover {
-    color: #333;
-    text-decoration: none;
+  color: #333;
+  text-decoration: none;
 }
 
 .article-svg {
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
 }
 
 .account-img {
-    height: 125px;
-    width: 125px;
-    margin-right: 20px;
-    margin-bottom: 16px;
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
 }
 
 .post-img {
-    height: 100%;
-    width: 100%;
-    margin-right: 20px;
-    margin-bottom: 16px;
-    
+  height: 100%;
+  width: 100%;
+  margin-right: 20px;
+  margin-bottom: 16px;
 }
 
 .account-heading {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
-#map{
-    height: 400px;  
-    width: 100%;
+#map {
+  height: 400px;
+  width: 100%;
 }
 
-.btn-light:hover{
-    background-color: #005aaa;
-    color: white;
+.btn-light:hover {
+  background-color: #005aaa;
+  color: white;
 }
-.btn-primary{
-    border: white 1px solid;
+.btn-primary {
+  border: white 1px solid;
 }
 
-.post-by{
-    color: #005aaa;
-    text-shadow: 0 0 1px #444444, 0 0 5px #005aaa;
-    font-family: sans-serif;
-    background-color: white;
-    border-radius: 12px;
-    padding: 5px;
-    text-align: center;
+.post-by {
+  color: #005aaa;
+  text-shadow: 0 0 1px #444444, 0 0 5px #005aaa;
+  font-family: sans-serif;
+  background-color: white;
+  border-radius: 12px;
+  padding: 5px;
+  text-align: center;
 }
-.comment-header{
-    color: #005aaa;
-    font-size: 40px;
-    text-shadow: 0 0 1px #444444, 0 0 5px #005aaa;
-    font-family: sans-serif;
-    text-align: center;
-    background-color: white;
-    border-radius: 12px;
-    padding: 10px;
+.comment-header {
+  color: #005aaa;
+  font-size: 40px;
+  text-shadow: 0 0 1px #444444, 0 0 5px #005aaa;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px;
 }
-.comment-section{
-    background-color: white;
-    border-radius: 12px;
-    padding: 10px;
+.comment-section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px;
 }
 /* Photo on post */
 
- /* Style the Image Used to Trigger the Modal */
- #myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 90%;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
   }
-  
-  #myImg:hover {opacity: 0.7;}
-  
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  to {
+    transform: scale(1);
   }
-  
-  /* Modal Content (Image) */
+}
+
+/* The Close Button */
+.close {
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-right: 20px;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
   .modal-content {
-    margin: auto;
-    display: block;
     width: 100%;
-    max-width: 90%;
   }
-  
-  /* Caption of Modal Image (Image Text) - Same Width as the Image */
-  #caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-  }
-  
-  /* Add Animation - Zoom in the Modal */
-  .modal-content, #caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-  }
-  
-  @keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-    margin-right: 20px;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px){
-    .modal-content {
-      width: 100%;
-    }
-  } 
+}
 
 /* Comment system */
 
 .comments-section {
-    background: #fff;
+  background: #fff;
 }
 
 .comment-area {
-    background: none repeat scroll 0 0 #fff;
-    border: medium none;
-    -webkit-border-radius: 4px 4px 0 0;
-    -moz-border-radius: 4px 4px 0 0;
-    -ms-border-radius: 4px 4px 0 0;
-    -o-border-radius: 4px 4px 0 0;
-    border-radius: 4px 4px 0 0;
-    color: #777777;
-    float: left;
-    font-family: Lato;
-    font-size: 14px;
-    height: 85px;
-    letter-spacing: 0.3px;
-    padding: 10px 20px;
-    width: 100%;
-    resize: vertical;
-    outline: none;
-    border: 1px solid #F2F2F2;
+  background: none repeat scroll 0 0 #fff;
+  border: medium none;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -ms-border-radius: 4px 4px 0 0;
+  -o-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  color: #777777;
+  float: left;
+  font-family: Lato;
+  font-size: 14px;
+  height: 85px;
+  letter-spacing: 0.3px;
+  padding: 10px 20px;
+  width: 100%;
+  resize: vertical;
+  outline: none;
+  border: 1px solid #f2f2f2;
 }
 
 .comment-btn {
-    float: right;
-    background: #005aaa;
-    margin: 5px 0;
-    padding: 6px 15px;
-    color: #fff;
-    letter-spacing: 1.5px;
-    outline: none;
-    border-radius: 4px;
-    box-shadow: none;
-    border: 1px solid white;
+  float: right;
+  background: #005aaa;
+  margin: 5px 0;
+  padding: 6px 15px;
+  color: #fff;
+  letter-spacing: 1.5px;
+  outline: none;
+  border-radius: 4px;
+  box-shadow: none;
+  border: 1px solid white;
 }
 
-.comment-btn:hover, .comment-btn:focus {
-    background: #00BFFF;
-    outline: none;
-    border-radius: 4px;
-    box-shadow: none;
-    color: white;
+.comment-btn:hover,
+.comment-btn:focus {
+  background: #00bfff;
+  outline: none;
+  border-radius: 4px;
+  box-shadow: none;
+  color: white;
 }
 
-.content{
-    background-color: white;
-    border-radius: 12px;
-    padding: 5px;
-    font-family: sans-serif;
-    letter-spacing: 0.3px;
-    resize: vertical;
+.content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 5px;
+  font-family: sans-serif;
+  letter-spacing: 0.3px;
+  resize: vertical;
 }

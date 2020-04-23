@@ -14,7 +14,7 @@
                     {% endif %}
                 </div>
                 <h2 class="article-title">{{ object.title }}</h2>
-                <p class="article-content">{{ object.content }}</p>
+                <p class="inside-article-content">{{ object.content }}</p>
                 {% if post.image %}
                    <img class="post-img" id="myImg" align="middle" src="{{ object.image.url|default_if_none:'#' }}">
                    <!-- The Modal -->
